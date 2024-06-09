@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="project1.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="2"/>
+        <CursorPos Y="18"/>
+        <UsageCount Value="49"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="calculatorform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="myCalculatorForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <TopLine Value="142"/>
+        <CursorPos X="6"/>
+        <UsageCount Value="49"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="calculator.pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="74"/>
+        <CursorPos X="42" Y="94"/>
+        <UsageCount Value="49"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="calculatorform.lfm"/>
+        <HasResources Value="True"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="11"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\fpc\3.2.2\source\packages\regexpr\src\regexpr.pas"/>
+        <UnitName Value="RegExpr"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1543"/>
+        <CursorPos X="19" Y="1563"/>
+        <UsageCount Value="8"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\include\application.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1151"/>
+        <CursorPos Y="1175"/>
+        <UsageCount Value="8"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\interfaces\win32\win32object.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="720"/>
+        <CursorPos Y="743"/>
+        <UsageCount Value="8"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\components\lazutils\winlazutf8.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="4"/>
+        <CursorPos Y="24"/>
+        <UsageCount Value="8"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\components\lazutils\lazfileutils.pas"/>
+        <UnitName Value="LazFileUtils"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="529"/>
+        <CursorPos Y="561"/>
+        <UsageCount Value="8"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\components\lazutils\lazutf8.pas"/>
+        <UnitName Value="LazUTF8"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="3947"/>
+        <CursorPos Y="3980"/>
+        <UsageCount Value="18"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\include\control.inc"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="3589"/>
+        <CursorPos Y="3614"/>
+        <UsageCount Value="18"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\include\customedit.inc"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="515"/>
+        <CursorPos Y="539"/>
+        <UsageCount Value="18"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\include\wincontrol.inc"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="7394"/>
+        <CursorPos Y="7434"/>
+        <UsageCount Value="18"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\interfaces\win32\win32wsstdctrls.pp"/>
+        <UnitName Value="Win32WSStdCtrls"/>
+        <EditorIndex Value="8"/>
+        <TopLine Value="1436"/>
+        <CursorPos Y="1460"/>
+        <UsageCount Value="18"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\interfaces\win32\win32proc.pp"/>
+        <UnitName Value="Win32Proc"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="1058"/>
+        <CursorPos Y="1085"/>
+        <UsageCount Value="18"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\interfaces\win32\win32wscontrols.pp"/>
+        <UnitName Value="Win32WSControls"/>
+        <EditorIndex Value="9"/>
+        <TopLine Value="505"/>
+        <CursorPos Y="528"/>
+        <UsageCount Value="18"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\widgetset\wsproc.pp"/>
+        <UnitName Value="WSProc"/>
+        <EditorIndex Value="10"/>
+        <TopLine Value="40"/>
+        <CursorPos Y="65"/>
+        <UsageCount Value="18"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="29">
+      <Position>
+        <Filename Value="calculator.pas"/>
+        <Caret Line="219" TopLine="198"/>
+      </Position>
+      <Position>
+        <Filename Value="calculator.pas"/>
+        <Caret Line="221" TopLine="198"/>
+      </Position>
+      <Position>
+        <Filename Value="calculator.pas"/>
+        <Caret Line="224" TopLine="207"/>
+      </Position>
+      <Position>
+        <Filename Value="calculator.pas"/>
+        <Caret Line="226" TopLine="207"/>
+      </Position>
+      <Position>
+        <Filename Value="calculator.pas"/>
+        <Caret Line="224" TopLine="207"/>
+      </Position>
+      <Position>
+        <Filename Value="calculator.pas"/>
+        <Caret Line="226" TopLine="207"/>
+      </Position>
+      <Position>
+        <Filename Value="calculator.pas"/>
+        <Caret Line="224" TopLine="207"/>
+      </Position>
+      <Position>
+        <Filename Value="calculator.pas"/>
+        <Caret Line="226" TopLine="207"/>
+      </Position>
+      <Position>
+        <Filename Value="calculator.pas"/>
+        <Caret Line="224" TopLine="207"/>
+      </Position>
+      <Position>
+        <Filename Value="calculator.pas"/>
+        <Caret Line="229" TopLine="207"/>
+      </Position>
+      <Position>
+        <Filename Value="calculator.pas"/>
+        <Caret Line="230" TopLine="207"/>
+      </Position>
+      <Position>
+        <Filename Value="calculator.pas"/>
+        <Caret Line="232" TopLine="207"/>
+      </Position>
+      <Position>
+        <Filename Value="calculator.pas"/>
+        <Caret Line="241" TopLine="209"/>
+      </Position>
+      <Position>
+        <Filename Value="calculator.pas"/>
+        <Caret Line="248" TopLine="216"/>
+      </Position>
+      <Position>
+        <Filename Value="calculator.pas"/>
+        <Caret Line="251" TopLine="219"/>
+      </Position>
+      <Position>
+        <Filename Value="calculator.pas"/>
+        <Caret Line="252" TopLine="220"/>
+      </Position>
+      <Position>
+        <Filename Value="calculator.pas"/>
+        <Caret Line="249" Column="23" TopLine="229"/>
+      </Position>
+      <Position>
+        <Filename Value="calculator.pas"/>
+        <Caret Line="142" Column="39" TopLine="116"/>
+      </Position>
+      <Position>
+        <Filename Value="calculator.pas"/>
+        <Caret Line="134" TopLine="118"/>
+      </Position>
+      <Position>
+        <Filename Value="calculator.pas"/>
+        <Caret Line="135" TopLine="118"/>
+      </Position>
+      <Position>
+        <Filename Value="calculator.pas"/>
+        <Caret Line="137" TopLine="118"/>
+      </Position>
+      <Position>
+        <Filename Value="calculator.pas"/>
+        <Caret Line="152" Column="83" TopLine="139"/>
+      </Position>
+      <Position>
+        <Filename Value="calculator.pas"/>
+        <Caret Line="304" Column="48" TopLine="266"/>
+      </Position>
+      <Position>
+        <Filename Value="calculator.pas"/>
+        <Caret Line="284" Column="59" TopLine="264"/>
+      </Position>
+      <Position>
+        <Filename Value="calculator.pas"/>
+        <Caret Line="39" Column="47" TopLine="20"/>
+      </Position>
+      <Position>
+        <Filename Value="calculator.pas"/>
+        <Caret Line="286" Column="66" TopLine="266"/>
+      </Position>
+      <Position>
+        <Filename Value="calculator.pas"/>
+        <Caret Line="281" Column="63" TopLine="246"/>
+      </Position>
+      <Position>
+        <Filename Value="calculator.pas"/>
+        <Caret Line="279" Column="35" TopLine="246"/>
+      </Position>
+      <Position>
+        <Filename Value="calculator.pas"/>
+        <Caret Line="281" Column="72" TopLine="246"/>
+      </Position>
+      <Position>
+        <Filename Value="calculator.pas"/>
+        <Caret Line="33" Column="30" TopLine="10"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>
