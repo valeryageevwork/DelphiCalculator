@@ -1,19 +1,19 @@
 object myCalculatorForm: TmyCalculatorForm
-  Left = 804
-  Height = 673
-  Top = 394
-  Width = 390
+  Left = 1458
+  Height = 783
+  Top = 358
+  Width = 435
   Caption = 'My Calculator'
-  ClientHeight = 673
-  ClientWidth = 390
+  ClientHeight = 783
+  ClientWidth = 435
   Color = clInactiveCaption
   DesignTimePPI = 120
   LCLVersion = '3.4.0.0'
   object memoText: TMemo
     Left = 8
     Height = 212
-    Top = 56
-    Width = 376
+    Top = 80
+    Width = 424
     Lines.Strings = (
       ''
     )
@@ -24,15 +24,15 @@ object myCalculatorForm: TmyCalculatorForm
   object editResult: TEdit
     Left = 8
     Height = 28
-    Top = 608
-    Width = 376
+    Top = 696
+    Width = 424
     Enabled = False
     TabOrder = 1
   end
   object Label1: TLabel
     Left = 8
     Height = 60
-    Top = 352
+    Top = 376
     Width = 211
     Caption = 'Digits: 0 1 2 3 4 5 6 7 8 9  and '','' '#13#10#13#10'Commands: + - * / ( )'
     Font.CharSet = RUSSIAN_CHARSET
@@ -44,7 +44,7 @@ object myCalculatorForm: TmyCalculatorForm
   object Label2: TLabel
     Left = 8
     Height = 20
-    Top = 584
+    Top = 672
     Width = 50
     Caption = 'Result:'
     Font.CharSet = RUSSIAN_CHARSET
@@ -57,7 +57,7 @@ object myCalculatorForm: TmyCalculatorForm
   object Label3: TLabel
     Left = 8
     Height = 20
-    Top = 32
+    Top = 56
     Width = 61
     Caption = 'History:'
     Font.CharSet = RUSSIAN_CHARSET
@@ -70,14 +70,15 @@ object myCalculatorForm: TmyCalculatorForm
   object editExpression: TEdit
     Left = 8
     Height = 28
-    Top = 448
-    Width = 376
+    Top = 488
+    Width = 424
     TabOrder = 2
+    OnChange = editExpressionChange
   end
   object Label4: TLabel
     Left = 8
     Height = 20
-    Top = 424
+    Top = 464
     Width = 152
     Caption = 'Write an expression:'
     Font.CharSet = RUSSIAN_CHARSET
@@ -89,53 +90,53 @@ object myCalculatorForm: TmyCalculatorForm
   end
   object ButtonCalculate: TButton
     Left = 152
-    Height = 31
-    Top = 640
-    Width = 94
+    Height = 56
+    Top = 727
+    Width = 112
     Caption = 'Evaluate'
     TabOrder = 3
     OnClick = ButtonCalculateClick
   end
   object ButtonOne: TButton
     Left = 8
-    Height = 31
-    Top = 480
-    Width = 22
+    Height = 39
+    Top = 536
+    Width = 24
     Caption = '1'
     TabOrder = 4
     OnClick = ButtonOneClick
   end
   object ButtonTwo: TButton
     Left = 32
-    Height = 31
-    Top = 480
-    Width = 22
+    Height = 39
+    Top = 536
+    Width = 24
     Caption = '2'
     TabOrder = 5
     OnClick = ButtonTwoClick
   end
   object ButtonThree: TButton
     Left = 56
-    Height = 31
-    Top = 480
-    Width = 22
+    Height = 39
+    Top = 536
+    Width = 24
     Caption = '3'
     TabOrder = 6
     OnClick = ButtonThreeClick
   end
   object ButtonFour: TButton
     Left = 80
-    Height = 31
-    Top = 480
-    Width = 22
+    Height = 39
+    Top = 536
+    Width = 24
     Caption = '4'
     TabOrder = 7
     OnClick = ButtonFourClick
   end
   object ButtonFive: TButton
     Left = 104
-    Height = 31
-    Top = 480
+    Height = 39
+    Top = 536
     Width = 22
     Caption = '5'
     TabOrder = 8
@@ -143,8 +144,8 @@ object myCalculatorForm: TmyCalculatorForm
   end
   object ButtonSeven: TButton
     Left = 152
-    Height = 31
-    Top = 480
+    Height = 39
+    Top = 536
     Width = 32
     Caption = '7'
     TabOrder = 9
@@ -152,35 +153,35 @@ object myCalculatorForm: TmyCalculatorForm
   end
   object ButtonEight: TButton
     Left = 184
-    Height = 31
-    Top = 480
-    Width = 24
+    Height = 39
+    Top = 536
+    Width = 32
     Caption = '8'
     TabOrder = 10
     OnClick = ButtonEightClick
   end
   object ButtonSix: TButton
     Left = 128
-    Height = 31
-    Top = 480
+    Height = 39
+    Top = 536
     Width = 24
     Caption = '6'
     TabOrder = 11
     OnClick = ButtonSixClick
   end
   object ButtonNine: TButton
-    Left = 208
-    Height = 31
-    Top = 480
+    Left = 216
+    Height = 39
+    Top = 536
     Width = 24
     Caption = '9'
     TabOrder = 12
     OnClick = ButtonNineClick
   end
   object ButtonZap: TButton
-    Left = 264
-    Height = 31
-    Top = 480
+    Left = 272
+    Height = 39
+    Top = 536
     Width = 25
     Caption = ','
     TabOrder = 13
@@ -188,26 +189,26 @@ object myCalculatorForm: TmyCalculatorForm
   end
   object ButtonDiv: TButton
     Left = 80
-    Height = 31
-    Top = 517
-    Width = 22
+    Height = 39
+    Top = 576
+    Width = 24
     Caption = '/'
     TabOrder = 14
     OnClick = ButtonDivClick
   end
   object ButtonMult: TButton
     Left = 56
-    Height = 31
-    Top = 517
-    Width = 22
+    Height = 39
+    Top = 576
+    Width = 24
     Caption = '*'
     TabOrder = 15
     OnClick = ButtonMultClick
   end
   object ButtonScobZakr: TButton
     Left = 128
-    Height = 31
-    Top = 517
+    Height = 39
+    Top = 576
     Width = 22
     Caption = ')'
     TabOrder = 16
@@ -215,8 +216,8 @@ object myCalculatorForm: TmyCalculatorForm
   end
   object ButtonScobOt: TButton
     Left = 104
-    Height = 31
-    Top = 517
+    Height = 39
+    Top = 576
     Width = 22
     Caption = '('
     TabOrder = 17
@@ -224,35 +225,35 @@ object myCalculatorForm: TmyCalculatorForm
   end
   object ButtonPlus: TButton
     Left = 8
-    Height = 31
-    Top = 517
-    Width = 22
+    Height = 39
+    Top = 576
+    Width = 24
     Caption = '+'
     TabOrder = 18
     OnClick = ButtonPlusClick
   end
   object ButtonMinus: TButton
     Left = 32
-    Height = 31
-    Top = 517
-    Width = 22
+    Height = 39
+    Top = 576
+    Width = 24
     Caption = '-'
     TabOrder = 19
     OnClick = ButtonMinusClick
   end
   object ButtonClear: TButton
     Left = 8
-    Height = 31
-    Top = 552
+    Height = 39
+    Top = 624
     Width = 136
     Caption = 'Clear'
     TabOrder = 20
     OnClick = ButtonClearClick
   end
   object ButtonZero: TButton
-    Left = 232
-    Height = 31
-    Top = 480
+    Left = 240
+    Height = 39
+    Top = 536
     Width = 30
     Caption = '0'
     TabOrder = 21
@@ -260,18 +261,18 @@ object myCalculatorForm: TmyCalculatorForm
   end
   object ButtonBack: TButton
     Left = 152
-    Height = 31
-    Top = 552
+    Height = 39
+    Top = 624
     Width = 135
     Caption = 'Backspace'
     TabOrder = 22
     OnClick = ButtonBackClick
   end
   object ButtonClearHist: TButton
-    Left = 152
-    Height = 31
-    Top = 272
-    Width = 94
+    Left = 158
+    Height = 48
+    Top = 304
+    Width = 112
     Caption = 'Clear history'
     TabOrder = 23
     OnClick = ButtonClearHistClick

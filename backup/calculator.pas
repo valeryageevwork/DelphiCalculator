@@ -15,8 +15,8 @@ const
   mathSymb = '+-*/('; // математические символы
   priorityOperation: array [1 .. 5] of byte = (1, 1, 2, 2, 0); // приоритет операций
 var
-  arrNumbers: array [0 .. 500] of Real; // массив чисел
-  arrCommands: array [0 .. 500] of Char; // массив команд
+  arrNumbers: array of Real; // массив чисел
+  arrCommands: array of Char; // массив команд
   lenNum, lenCom: Cardinal;
   // lenNum - длина массива чисел,
   // lenCom - массива команд
@@ -30,11 +30,13 @@ function PopCom: Char;
 
 function TransfInNumber(firstNumber, secondNumber: Real; op: Char): Real;
 
-procedure PreTransfInPostfix(expressionText: String);
+function PreTransfInPostfix(expressionText: String) : String;
 
 function TransfInPostfix(expressionText: String): String;
 
 function CalculateInNumber(expressionText: String): Real;
+
+function CheckExpression(expressionText: string; i : Cardinal): Boolean;
 
 public
 
@@ -91,22 +93,69 @@ begin
   TransfInNumber := res;
 end;
 
-procedure TCalculator.PreTransfInPostfix(var expressionText: String);
+function TCalculator.PreTransfInPostfix(expressionText: String) : String;
 var
-  i, lenExpString: Cardinal;
+  i: Cardinal;
 begin
-  lenExpString := Length(expressionText);
   if(not (Length(expressionText) = 0)) then
   begin
+    SetLength(arrNumbers, Length(expressionText));
+    SetLength(arrCommands, Length(expressionText));
      if expressionText[1] = '-' then
        expressionText := '0' + expressionText;
     i := 1;
-    while i <= lenExpString do
+    while i <= Length(expressionText) do
     if (expressionText[i] = '(') and (expressionText[i + 1] = '-') then
       insert('0', expressionText, i + 1)
     else
       Inc(i);
+    PreTransfInPostfix := expressionText;
   end;
+end;
+
+function TCalculator.CheckExpression(expressionText: string; i : Cardinal): Boolean;
+var
+  flag : Boolean;
+  number : Real;
+begin
+  flag := false;
+  if (expressionText[i] in ['+', '-', '*', '/', '(', ')']) then
+    begin
+
+      if expressionText[i] = '(' then
+        if (i > 1) then
+          if (TryStrToFloat(expressionText[i-1], number))
+            begin
+              flag := true;
+            end;
+
+      if expressionText[i] = ')' then
+        begin
+          if (i > 1) and not (i = Length(expressionText)) then
+            if not (((expressionText[i-1] = ')') or TryStrToFloat(expressionText[i-1], number))
+               and (expressionText[i+1] in ['+', '-', '*', '/', ')'])) then
+              begin
+                flag := true;
+              end;
+          if (lenCom = 0) then
+            begin
+              flag := true;
+            end;
+        end;
+
+      if expressionText[i] in ['+', '-', '*', '/'] then
+        begin
+          if not ((i > 1) and not (i = Length(expressionText))) then
+            flag := true
+          else
+            begin
+              if not ((TryStrToFloat(expressionText[i-1], number) or (expressionText[i-1] = ')'))
+              and ((expressionText[i+1] = '(') or TryStrToFloat(expressionText[i+1], number)))then
+                flag := true;
+            end;
+        end;
+    end;
+  CheckExpression := flag;
 end;
 
 function TCalculator.TransfInPostfix(expressionText: String): String;
@@ -134,7 +183,7 @@ begin
               flagProbel := true;
               if expressionText[i] = '(' then // если скобка - добавляем в стек
                 begin
-                  if(i > 1) and (TryStrToFloat(expressionText[i-1], number)) then
+                  if(CheckExpression(expressionText, i)) then
                   begin
                     resultString := '';
                     break;
@@ -148,22 +197,21 @@ begin
                   // и извлекаем из стека откр. скобку в конце
                     begin
                       if(i > 1) then
-                        if(expressionText[i-1] = '(') or (TryStrToFloat(expressionText[i+1], number)) then
-                        begin
-                        resultString := '';
-                        break;
-                        end;
-                      while ((arrCommands[lenCom] <> '(') and (lenCom > 0)) do
-                        begin
-                          resultString := resultString + ' ' + PopCom;
-                        end;
-                      if not (lenCom = 0) then
-                        PopCom
-                      else
-                        begin
-                          resultString := '';
-                          break;
-                        end;
+                        if(CheckExpression(expressionText, i)) then
+                          begin
+                            resultString := '';
+                            break;
+                          end;
+                        while ((arrCommands[lenCom] <> '(') and (lenCom > 0)) do
+                          begin
+                            resultString := resultString + ' ' + PopCom;
+                          end;
+                        if(CheckExpression(expressionText, i)) then
+                          begin
+                            resultString := '';
+                            break;
+                          end;
+                        PopCom;
                     end;
               if expressionText[i] in ['+', '-', '*', '/'] then
                 begin
@@ -176,26 +224,7 @@ begin
 
                   PushCom(expressionText[i]);
 
-                  if (i > 1) and not (i = Length(expressionText)) then
-                    begin
-                      if not(TryStrToFloat(expressionText[i-1], number)) then
-                        begin
-                          if (expressionText[i-1] = ')') and ((TryStrToFloat(expressionText[i+1], number)) or (expressionText[i+1] = '(')) then
-                            begin
-                              continue;
-                            end
-                          else
-                            begin
-                              resultString := '';
-                              break;
-                            end;
-                        end
-                      else
-                        begin
-                          continue;
-                        end;
-                    end
-                  else
+                  if (CheckExpression(expressionText, i)) then
                     begin
                       resultString := '';
                       break;
@@ -232,7 +261,7 @@ begin
         if(expressionText[1] = ' ') then
           delete(expressionText, 1, 1);
 
-        while(not (expressionText[i] = ' ') and (i < Length(expressionText))) do
+        while(not (expressionText[i] = ' ') and (i < n)) do
         begin
            Inc(i);
         end;
@@ -276,7 +305,7 @@ end;
 
 function TCalculator.Calculate(expressionText: String): String;
 begin
-  PreTransfInPostfix(expressionText);
+  expressionText := PreTransfInPostfix(expressionText);
   expressionText := TransfInPostfix(expressionText);
   Calculate := FloatToStrF(CalculateInNumber(expressionText),ffFixed, 4, 4);
 end;

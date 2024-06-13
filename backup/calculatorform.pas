@@ -62,6 +62,7 @@ type
     procedure ButtonThreeClick(Sender: TObject);
     procedure ButtonTwoClick(Sender: TObject);
     procedure ButtonZapClick(Sender: TObject);
+    procedure editExpressionChange(Sender: TObject);
   private
 
   public
@@ -79,7 +80,7 @@ implementation
 
 procedure TmyCalculatorForm.ButtonCalculateClick(Sender: TObject);
 var
-  str, temp : String;
+  str, temp, tempMemo : String;
   myCalculator : TCalculator;
 begin
   str := editExpression.Text;
@@ -94,6 +95,14 @@ begin
     editResult.Text := str;
 
   memoText.Text := memoText.Text + temp + sLineBreak + 'Result: ' + editResult.Text + sLineBreak + sLineBreak;
+
+  tempMemo := memoText.Text;
+  if(copy(tempMemo, 1, 1) = memoText.Text + temp + sLineBreak) then
+  begin
+    tempMemo := memoText.Text;
+    delete(tempMemo, 1, 1);
+    memoText.Text := tempMemo;
+  end;
 end;
 
 procedure TmyCalculatorForm.ButtonClearClick(Sender: TObject);
@@ -198,6 +207,20 @@ end;
 procedure TmyCalculatorForm.ButtonZapClick(Sender: TObject);
 begin
   editExpression.Text := editExpression.Text + ',';
+end;
+
+procedure TmyCalculatorForm.editExpressionChange(Sender: TObject);
+var
+  expression : string;
+  lastSymbExpression : char;
+begin
+  expression := editExpression.Text;
+  if not (Length(expression) = 0) then
+    begin
+      lastSymbExpression := expression[Length(expression)];
+      if not((lastSymbExpression in ['+', '-', '/', '*', '(', ')', ',']) or (Ord(lastSymbExpression) > 47) and (Ord(lastSymbExpression) < 58)) then
+        editExpression.Text := '';
+    end;
 end;
 
 end.
