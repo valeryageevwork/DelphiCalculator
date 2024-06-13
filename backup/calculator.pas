@@ -124,7 +124,7 @@ begin
 
       if expressionText[i] = '(' then
         if (i > 1) then
-          if (TryStrToFloat(expressionText[i-1], number))
+          if (TryStrToFloat(expressionText[i-1], number)) then
             begin
               flag := true;
             end;

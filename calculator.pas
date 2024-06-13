@@ -74,10 +74,8 @@ end;
 
 function TCalculator.TransfInNumber(firstNumber, secondNumber: Real; op: Char): Real;
 var
-  num1, num2, res: Real;
+  res: Real;
 begin
-  num1 := firstNumber;
-  num2 := secondNumber;
   case op of
     '+': res := firstNumber + secondNumber;
     '-': res := firstNumber - secondNumber;

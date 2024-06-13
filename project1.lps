@@ -19,7 +19,6 @@
         <ComponentName Value="myCalculatorForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <TopLine Value="74"/>
         <CursorPos Y="95"/>
         <UsageCount Value="57"/>
         <Loaded Value="True"/>
@@ -30,8 +29,8 @@
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="158"/>
-        <CursorPos X="100" Y="21"/>
+        <TopLine Value="70"/>
+        <CursorPos X="29" Y="81"/>
         <UsageCount Value="57"/>
         <Loaded Value="True"/>
       </Unit>
