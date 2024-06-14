@@ -63,6 +63,9 @@ type
     procedure ButtonTwoClick(Sender: TObject);
     procedure ButtonZapClick(Sender: TObject);
     procedure editExpressionChange(Sender: TObject);
+    procedure editExpressionEnter(Sender: TObject);
+    procedure editExpressionExit(Sender: TObject);
+    procedure FormKeyPress(Sender: TObject; var Key: char);
   private
 
   public
@@ -71,6 +74,7 @@ type
 
 var
   myCalculatorForm: TmyCalculatorForm;
+  checkEnter : Boolean = true;
 
 implementation
 
@@ -204,15 +208,35 @@ end;
 procedure TmyCalculatorForm.editExpressionChange(Sender: TObject);
 var
   expression : string;
-  lastSymbExpression : char;
+  symbExpression : char;
+  i : Cardinal;
 begin
   expression := editExpression.Text;
   if not (Length(expression) = 0) then
     begin
-      lastSymbExpression := expression[Length(expression)];
-      if not((lastSymbExpression in ['+', '-', '/', '*', '(', ')', ',']) or (Ord(lastSymbExpression) > 47) and (Ord(lastSymbExpression) < 58)) then
-        editExpression.Text := '';
+      for i:= 1 to Length(expression) do
+      begin
+        if not ((expression[i] in ['+', '-', '/', '*', '(', ')', ',']) or (Ord(expression[i]) > 47) and (Ord(expression[i]) < 58)) then
+          delete(expression, i, 1);
+      end;
     end;
+  editExpression.Text := expression;
+end;
+
+procedure TmyCalculatorForm.editExpressionEnter(Sender: TObject);
+begin
+  checkEnter := false;
+end;
+
+procedure TmyCalculatorForm.editExpressionExit(Sender: TObject);
+begin
+  checkEnter := true;
+end;
+
+procedure TmyCalculatorForm.FormKeyPress(Sender: TObject; var Key: char);
+begin
+  if(checkEnter) then
+     editExpression.Text := editExpression.Text + Key;
 end;
 
 end.

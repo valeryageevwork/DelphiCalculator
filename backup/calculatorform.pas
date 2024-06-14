@@ -63,6 +63,10 @@ type
     procedure ButtonTwoClick(Sender: TObject);
     procedure ButtonZapClick(Sender: TObject);
     procedure editExpressionChange(Sender: TObject);
+    procedure editExpressionEnter(Sender: TObject);
+    procedure editExpressionExit(Sender: TObject);
+    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure FormKeyPress(Sender: TObject; var Key: char);
   private
 
   public
@@ -71,6 +75,7 @@ type
 
 var
   myCalculatorForm: TmyCalculatorForm;
+  checkEnter : Boolean = true;
 
 implementation
 
@@ -80,7 +85,7 @@ implementation
 
 procedure TmyCalculatorForm.ButtonCalculateClick(Sender: TObject);
 var
-  str, temp, tempMemo : String;
+  str, temp : String;
   myCalculator : TCalculator;
 begin
   str := editExpression.Text;
@@ -95,14 +100,6 @@ begin
     editResult.Text := str;
 
   memoText.Text := memoText.Text + temp + sLineBreak + 'Result: ' + editResult.Text + sLineBreak + sLineBreak;
-
-  tempMemo := memoText.Text;
-  if(copy(tempMemo, 1, 1) = memoText.Text + temp + sLineBreak) then
-  begin
-    tempMemo := memoText.Text;
-    delete(tempMemo, 1, 1);
-    memoText.Text := tempMemo;
-  end;
 end;
 
 procedure TmyCalculatorForm.ButtonClearClick(Sender: TObject);
@@ -212,15 +209,35 @@ end;
 procedure TmyCalculatorForm.editExpressionChange(Sender: TObject);
 var
   expression : string;
-  lastSymbExpression : char;
+  symbExpression : char;
+  i : Cardinal;
 begin
   expression := editExpression.Text;
   if not (Length(expression) = 0) then
     begin
-      lastSymbExpression := expression[Length(expression)];
-      if not((lastSymbExpression in ['+', '-', '/', '*', '(', ')', ',']) or (Ord(lastSymbExpression) > 47) and (Ord(lastSymbExpression) < 58)) then
-        editExpression.Text := '';
+      for i:= 1 to Length(expression) do
+      begin
+        if not ((expression[i] in ['+', '-', '/', '*', '(', ')', ',']) or (Ord(expression[i]) > 47) and (Ord(expression[i]) < 58)) then
+          delete(expression, i, 1);
+      end;
     end;
+  editExpression.Text := expression;
+end;
+
+procedure TmyCalculatorForm.editExpressionEnter(Sender: TObject);
+begin
+  checkEnter := false;
+end;
+
+procedure TmyCalculatorForm.editExpressionExit(Sender: TObject);
+begin
+  checkEnter := true;
+end;
+
+procedure TmyCalculatorForm.FormKeyPress(Sender: TObject; var Key: char);
+begin
+  if(checkEnter) then
+     editExpression.Text := editExpression.Text + Key;
 end;
 
 end.
