@@ -65,7 +65,6 @@ type
     procedure editExpressionChange(Sender: TObject);
     procedure editExpressionEnter(Sender: TObject);
     procedure editExpressionExit(Sender: TObject);
-    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure FormKeyPress(Sender: TObject; var Key: char);
   private
 

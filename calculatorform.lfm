@@ -1,21 +1,21 @@
 object myCalculatorForm: TmyCalculatorForm
-  Left = 1343
-  Height = 793
-  Top = 348
-  Width = 564
+  Left = 1132
+  Height = 850
+  Top = 256
+  Width = 435
   Caption = 'My Calculator'
-  ClientHeight = 793
-  ClientWidth = 564
+  ClientHeight = 850
+  ClientWidth = 435
   Color = clInactiveCaption
   DesignTimePPI = 120
   KeyPreview = True
   OnKeyPress = FormKeyPress
   LCLVersion = '3.4.0.0'
   object memoText: TMemo
-    Left = 8
-    Height = 212
-    Top = 80
-    Width = 552
+    Left = 0
+    Height = 172
+    Top = 56
+    Width = 432
     Lines.Strings = (
       ''
     )
@@ -24,19 +24,19 @@ object myCalculatorForm: TmyCalculatorForm
     TabOrder = 0
   end
   object editResult: TEdit
-    Left = 8
+    Left = 0
     Height = 28
-    Top = 696
-    Width = 552
+    Top = 760
+    Width = 432
     Enabled = False
     TabOrder = 1
   end
   object Label1: TLabel
-    Left = 8
-    Height = 60
-    Top = 376
-    Width = 211
-    Caption = 'Digits: 0 1 2 3 4 5 6 7 8 9  and '','' '#13#10#13#10'Commands: + - * / ( )'
+    Left = 0
+    Height = 140
+    Top = 416
+    Width = 289
+    Caption = 'Digits: 0 1 2 3 4 5 6 7 8 9  and '','' '#13#10#13#10'Commands: + - * / ( )'#13#10#13#10'Enter the button below to write expression. '#13#10#13#10'Clear the expression or backspace the symbol'
     Font.CharSet = RUSSIAN_CHARSET
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
@@ -44,9 +44,9 @@ object myCalculatorForm: TmyCalculatorForm
     ParentFont = False
   end
   object Label2: TLabel
-    Left = 8
+    Left = 0
     Height = 20
-    Top = 672
+    Top = 736
     Width = 50
     Caption = 'Result:'
     Font.CharSet = RUSSIAN_CHARSET
@@ -57,9 +57,9 @@ object myCalculatorForm: TmyCalculatorForm
     ParentFont = False
   end
   object Label3: TLabel
-    Left = 8
+    Left = 0
     Height = 20
-    Top = 56
+    Top = 32
     Width = 61
     Caption = 'History:'
     Font.CharSet = RUSSIAN_CHARSET
@@ -70,19 +70,19 @@ object myCalculatorForm: TmyCalculatorForm
     ParentFont = False
   end
   object editExpression: TEdit
-    Left = 8
+    Left = 0
     Height = 28
-    Top = 488
-    Width = 552
+    Top = 328
+    Width = 432
     TabOrder = 2
     OnChange = editExpressionChange
     OnEnter = editExpressionEnter
     OnExit = editExpressionExit
   end
   object Label4: TLabel
-    Left = 8
+    Left = 0
     Height = 20
-    Top = 464
+    Top = 296
     Width = 152
     Caption = 'Write an expression:'
     Font.CharSet = RUSSIAN_CHARSET
@@ -93,189 +93,189 @@ object myCalculatorForm: TmyCalculatorForm
     ParentFont = False
   end
   object ButtonCalculate: TButton
-    Left = 224
+    Left = 160
     Height = 56
-    Top = 727
+    Top = 792
     Width = 112
     Caption = 'Evaluate'
     TabOrder = 3
     OnClick = ButtonCalculateClick
   end
   object ButtonOne: TButton
-    Left = 8
+    Left = 0
     Height = 39
-    Top = 536
-    Width = 32
+    Top = 648
+    Width = 48
     Caption = '1'
     TabOrder = 4
     OnClick = ButtonOneClick
   end
   object ButtonTwo: TButton
-    Left = 40
+    Left = 48
     Height = 39
-    Top = 536
+    Top = 648
     Width = 48
     Caption = '2'
     TabOrder = 5
     OnClick = ButtonTwoClick
   end
   object ButtonThree: TButton
-    Left = 88
+    Left = 96
     Height = 39
-    Top = 536
+    Top = 648
     Width = 64
     Caption = '3'
     TabOrder = 6
     OnClick = ButtonThreeClick
   end
   object ButtonFour: TButton
-    Left = 152
+    Left = 0
     Height = 39
-    Top = 536
-    Width = 64
+    Top = 608
+    Width = 48
     Caption = '4'
     TabOrder = 7
     OnClick = ButtonFourClick
   end
   object ButtonFive: TButton
-    Left = 215
+    Left = 48
     Height = 39
-    Top = 536
-    Width = 72
+    Top = 608
+    Width = 48
     Caption = '5'
     TabOrder = 8
     OnClick = ButtonFiveClick
   end
   object ButtonSeven: TButton
-    Left = 328
+    Left = 0
     Height = 39
-    Top = 536
+    Top = 568
     Width = 48
     Caption = '7'
     TabOrder = 9
     OnClick = ButtonSevenClick
   end
   object ButtonEight: TButton
-    Left = 376
+    Left = 48
     Height = 39
-    Top = 536
+    Top = 568
     Width = 48
     Caption = '8'
     TabOrder = 10
     OnClick = ButtonEightClick
   end
   object ButtonSix: TButton
-    Left = 288
+    Left = 96
     Height = 39
-    Top = 536
-    Width = 40
+    Top = 608
+    Width = 64
     Caption = '6'
     TabOrder = 11
     OnClick = ButtonSixClick
   end
   object ButtonNine: TButton
-    Left = 424
+    Left = 96
     Height = 39
-    Top = 536
-    Width = 40
+    Top = 568
+    Width = 64
     Caption = '9'
     TabOrder = 12
     OnClick = ButtonNineClick
   end
   object ButtonZap: TButton
-    Left = 512
+    Left = 96
     Height = 39
-    Top = 536
-    Width = 48
+    Top = 688
+    Width = 64
     Caption = ','
     TabOrder = 13
     OnClick = ButtonZapClick
   end
   object ButtonDiv: TButton
-    Left = 152
+    Left = 200
     Height = 39
-    Top = 576
-    Width = 64
+    Top = 608
+    Width = 48
     Caption = '/'
     TabOrder = 14
     OnClick = ButtonDivClick
   end
   object ButtonMult: TButton
-    Left = 88
+    Left = 160
     Height = 39
-    Top = 576
-    Width = 64
+    Top = 608
+    Width = 40
     Caption = '*'
     TabOrder = 15
     OnClick = ButtonMultClick
   end
   object ButtonScobZakr: TButton
-    Left = 280
+    Left = 200
     Height = 39
-    Top = 576
-    Width = 70
+    Top = 688
+    Width = 46
     Caption = ')'
     TabOrder = 16
     OnClick = ButtonScobZakrClick
   end
   object ButtonScobOt: TButton
-    Left = 216
+    Left = 160
     Height = 39
-    Top = 576
-    Width = 62
+    Top = 688
+    Width = 40
     Caption = '('
     TabOrder = 17
     OnClick = ButtonScobOtClick
   end
   object ButtonPlus: TButton
-    Left = 8
+    Left = 160
     Height = 39
-    Top = 576
-    Width = 32
+    Top = 648
+    Width = 40
     Caption = '+'
     TabOrder = 18
     OnClick = ButtonPlusClick
   end
   object ButtonMinus: TButton
-    Left = 40
+    Left = 200
     Height = 39
-    Top = 576
+    Top = 648
     Width = 48
     Caption = '-'
     TabOrder = 19
     OnClick = ButtonMinusClick
   end
   object ButtonClear: TButton
-    Left = 8
+    Left = 0
     Height = 39
-    Top = 624
+    Top = 360
     Width = 136
     Caption = 'Clear'
     TabOrder = 20
     OnClick = ButtonClearClick
   end
   object ButtonZero: TButton
-    Left = 464
+    Left = 0
     Height = 39
-    Top = 536
-    Width = 46
+    Top = 688
+    Width = 96
     Caption = '0'
     TabOrder = 21
     OnClick = ButtonZeroClick
   end
   object ButtonBack: TButton
-    Left = 152
+    Left = 136
     Height = 39
-    Top = 624
-    Width = 135
+    Top = 360
+    Width = 110
     Caption = 'Backspace'
     TabOrder = 22
     OnClick = ButtonBackClick
   end
   object ButtonClearHist: TButton
-    Left = 224
+    Left = 160
     Height = 48
-    Top = 304
+    Top = 232
     Width = 112
     Caption = 'Clear history'
     TabOrder = 23
