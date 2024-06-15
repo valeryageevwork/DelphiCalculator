@@ -166,7 +166,7 @@ begin
   if(not (Length(expressionText) = 0)) then
     begin
       lenExpString := Length(expressionText);
-      flagProbel := false; // для пробела после числа
+      flagProbel := false; // для пробела в результ. строке
       for i := 1 to lenExpString do
         begin
           if not(expressionText[i] in ['+', '-', '*', '/', '(', ')']) then  // записываем число

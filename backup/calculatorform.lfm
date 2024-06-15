@@ -36,7 +36,7 @@ object myCalculatorForm: TmyCalculatorForm
     Height = 140
     Top = 416
     Width = 289
-    Caption = 'Digits: 0 1 2 3 4 5 6 7 8 9  and '','' '#13#10#13#10'Commands: + - * / ( )'#13#10#13#10'Enter the button to write expression. '#13#10#13#10'Clear the expression or backspace the symbol'
+    Caption = 'Digits: 0 1 2 3 4 5 6 7 8 9  and '','' '#13#10#13#10'Commands: + - * / ( )'#13#10#13#10'Enter the button below to write expression. '#13#10#13#10'Clear the expression or backspace the symbol'
     Font.CharSet = RUSSIAN_CHARSET
     Font.Pitch = fpVariable
     Font.Quality = fqDraft

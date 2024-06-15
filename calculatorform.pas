@@ -208,7 +208,6 @@ end;
 procedure TmyCalculatorForm.editExpressionChange(Sender: TObject);
 var
   expression : string;
-  symbExpression : char;
   i : Cardinal;
 begin
   expression := editExpression.Text;

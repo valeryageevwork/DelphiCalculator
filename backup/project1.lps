@@ -19,8 +19,8 @@
         <ComponentName Value="myCalculatorForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <TopLine Value="146"/>
-        <CursorPos X="133" Y="70"/>
+        <TopLine Value="202"/>
+        <CursorPos X="23" Y="210"/>
         <UsageCount Value="60"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -30,8 +30,7 @@
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="142"/>
-        <CursorPos X="52" Y="259"/>
+        <CursorPos X="60" Y="169"/>
         <UsageCount Value="60"/>
         <Loaded Value="True"/>
       </Unit>
