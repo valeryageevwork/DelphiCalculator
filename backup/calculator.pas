@@ -256,8 +256,7 @@ begin
       repeat
         j := i;
 
-        if(expressionText[1] = ' ') then
-          delete(expressionText, 1, 1);
+        expressionText := TrimLeft(expressionText);
 
         while(not (expressionText[i] = ' ') and (i < n)) do
         begin

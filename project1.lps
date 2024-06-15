@@ -19,8 +19,7 @@
         <ComponentName Value="myCalculatorForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
-        <TopLine Value="49"/>
+        <TopLine Value="146"/>
         <CursorPos X="133" Y="70"/>
         <UsageCount Value="60"/>
         <Loaded Value="True"/>
@@ -29,9 +28,10 @@
       <Unit>
         <Filename Value="calculator.pas"/>
         <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="235"/>
-        <CursorPos X="52" Y="259"/>
+        <TopLine Value="251"/>
+        <CursorPos X="66" Y="280"/>
         <UsageCount Value="60"/>
         <Loaded Value="True"/>
       </Unit>

@@ -276,7 +276,7 @@ begin
         else
           begin
             if(TryStrToFloat(charBufer, temp) and not((charBufer[1] = ',') or
-               (Pos('0', charBufer) = 1) and not (Length(charBufer) = 1) or
+               (Pos('0', charBufer) = 1) and (Length(charBufer) = 1) or
                (Pos(',', charBufer) = Length(charBufer)))) then
               begin
                 floatValue := StrToFloat(charBufer);
